@@ -1,0 +1,55 @@
+.FiltersPopup {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    background-color: #201de2a4;
+    z-index: 1;
+    top: 0;
+    left: 14vw;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-radius: 8px;
+}
+
+.FiltersPopup input {
+    width: 56px;
+    padding: 0 8px;
+    margin: 0 4px;
+    border-radius: 8px;
+    height: 40px;
+    background-color: #6462f4;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.FiltersPopup select {
+    padding: 0 8px;
+    margin: 0 4px;
+    border-radius: 8px;
+    height: 30px;
+    background-color: #6462f4;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    overflow: scroll;
+}
+
+.FiltersPopup button {
+    margin: 8px 12px;
+    color: black;
+    background-color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.FiltersPopup h3 {
+    color: red;
+    background-color: white;
+}
+
+.FiltersPopup select option{ 
+    font-size: 0.8rem;
+}

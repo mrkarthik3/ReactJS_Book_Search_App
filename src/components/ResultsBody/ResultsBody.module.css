@@ -1,0 +1,14 @@
+.ResultsBody {
+    min-height: 420px;
+    /* border: 1px dashed blue; */
+    padding: 0 5vw;
+    margin: 0 auto;
+    overflow:auto;
+}
+
+.Results{
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}

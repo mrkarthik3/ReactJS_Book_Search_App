@@ -1,0 +1,12 @@
+.MainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    border: 1px dotted black;
+    min-height: 10vh;
+    margin-top: 2vh;
+    position: sticky;
+    top: 0;
+    background-color: #B5B4FB;
+}

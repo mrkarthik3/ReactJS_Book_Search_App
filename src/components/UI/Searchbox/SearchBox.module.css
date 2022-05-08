@@ -1,0 +1,27 @@
+.SearchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SearchBox input {
+    width: 35vw;
+    height: 28px;
+    padding: 4px 12px;
+    font-size: 1.05rem;
+    outline: none;
+}
+
+.SearchBox input:hover {
+    border-color:#007bffd2;
+}
+.SearchBox img  { 
+    width: 16px;
+    padding: 12px;
+    background-color: #6462f4;
+}
+
+.SearchBox img:hover  {
+    background-color: #007bffd2;
+    cursor: pointer;
+}

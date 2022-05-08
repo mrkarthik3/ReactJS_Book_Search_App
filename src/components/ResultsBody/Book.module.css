@@ -1,0 +1,73 @@
+.Book {
+    width: 380px;
+    display: flex;
+    text-align: left;
+    border: 2px solid #8886F8;
+    margin: 8px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.image{
+    padding: 16px;
+    width: 100px;
+    /* border: 1px solid black; */
+    /* border-radius: 8px; */
+}
+
+.bookinfo {
+    padding: 8px;
+    width: 70%;
+    /* border: 1px solid black; */
+    /* border-radius: 8px; */
+}
+
+.bookinfo ul {
+    list-style:square;
+    padding-left: 4px;
+    font-weight: bold;
+}
+
+.bookinfo button {
+    display: block  ;
+    margin: 8px auto;
+    padding: 4px 8px;
+}
+@media screen and (max-width: 620px) {
+    .Book {
+        width: 300px;
+        display: flex;
+        text-align: left;
+        border: 2px solid #8886F8;
+        margin: 8px;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 8px;
+        font-size: small;
+    }
+  }
+@media screen and (min-width: 200px) and (max-width: 400px)  {
+    .Book {
+        width: 260px;
+        display: flex;
+        text-align: left;
+        border: 2px solid #8886F8;
+        margin: 8px;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 8px;
+    }
+  }
+@media screen and (min-width: 621px) and (max-width: 950px)  {
+    .Book {
+        width: 480px;
+        display: flex;
+        text-align: left;
+        border: 2px solid #8886F8;
+        margin: 8px;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 8px;
+    }
+  }
