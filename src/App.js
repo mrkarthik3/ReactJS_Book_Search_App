@@ -41,7 +41,7 @@ function App() {
   };
   return (
     <div className={styles.App}>
-      <h2>Book Search App</h2>
+      <h2 className={styles.AppName}>Book Search App</h2>
       <MainHeader
         genres={genres}
         pullFilters={pullFilters}

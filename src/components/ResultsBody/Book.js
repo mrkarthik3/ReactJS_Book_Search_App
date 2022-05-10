@@ -10,11 +10,26 @@ const Book = (props) => {
       </div>
       <div className={styles.bookinfo}>
         <ul>
-          <li>Title: {props.data.title}</li>
-          <li>Author: {props.data.author}</li>
-          <li>Genre: {props.data.genre}</li>
-          <li>Rating: {props.data.rating}</li>
-          <li>Price: Rs. {props.data.price}</li>
+          <li>
+            <span className={styles.Span}>Title - </span>
+            <span className={styles.Data}>{props.data.title}</span>
+          </li>
+          <li>
+            <span className={styles.Span}>Author - </span>{" "}
+            <span className={styles.Data}>{props.data.author}</span>
+          </li>
+          <li>
+            <span className={styles.Span}>Genre - </span>{" "}
+            <span className={styles.Data}>{props.data.genre}</span>
+          </li>
+          <li>
+            <span className={styles.Span}>Rating - </span>
+            <span className={styles.Data}>{props.data.rating}</span>
+          </li>
+          <li>
+            <span className={styles.Span}>Price - </span>
+            <span className={styles.Data}> Rs. {props.data.price}</span>
+          </li>
         </ul>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { react, useEffect, useState } from "react";
 import styles from "./ResultsBody.module.css";
 import Book from "./Book";
+import loadingImage from "../../images/30.gif";
 
 const ResultsBody = (props) => {
   // console.log("ResultsBody Component Ran");
@@ -260,7 +261,7 @@ const ResultsBody = (props) => {
     return (
       <div className={styles.ResultsBody}>
         <div className={styles.Loading}>
-          <p>Loading Data...</p>
+          <img src={loadingImage} />
         </div>
       </div>
     );

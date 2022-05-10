@@ -11,3 +11,15 @@
 * button:hover {
   cursor: pointer;
 }
+
+.AppName {
+  background: #6462f4;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 5px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  border-radius: 25px 25px;
+  color: white;
+}

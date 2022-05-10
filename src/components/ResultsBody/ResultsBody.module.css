@@ -12,3 +12,10 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.Loading {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

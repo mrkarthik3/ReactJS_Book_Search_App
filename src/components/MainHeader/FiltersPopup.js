@@ -110,7 +110,7 @@ const FiltersPopup = (props) => {
           type="number"
           step="1"
           min="1"
-          max="4"
+          max="5"
           // ref={ratingMin}
           onChange={ratingMinHandler}
           value={ratingMin}
@@ -120,7 +120,7 @@ const FiltersPopup = (props) => {
         <input
           type="number"
           step="1"
-          min="2"
+          min="1"
           max="5"
           // ref={ratingMax}
           onChange={ratingMaxHandler}

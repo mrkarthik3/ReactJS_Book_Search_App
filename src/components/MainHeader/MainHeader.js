@@ -20,10 +20,9 @@ const MainHeader = (props) => {
   };
   return (
     <div className={styles.MainHeader}>
-      <Button buttonText="Filters" displayFilters={displayFilters} />
-      <span className={styles.FiltersNum}>
-        {" "}
-        Filters Applied : {props.filtersNumber}
+      <span className={styles.SideBySide}>
+        <Button buttonText="Filters" onClick={displayFilters} />
+        <span className={styles.FiltersNum}>{props.filtersNumber}</span>
       </span>
       {showFilters && (
         <FiltersPopup
@@ -33,7 +32,7 @@ const MainHeader = (props) => {
         />
       )}
       <SearchBox
-        placeholder="LIVE Search by Title & Author"
+        placeholder="Search by Title/Author"
         pullSearchText={getSearchData}
       />
     </div>

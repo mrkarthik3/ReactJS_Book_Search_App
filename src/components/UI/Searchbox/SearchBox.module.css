@@ -9,6 +9,7 @@
     height: 28px;
     padding: 4px 12px;
     font-size: 1.05rem;
+    border-radius: 4px 25px;
     outline: none;
 }
 
@@ -19,6 +20,8 @@
     width: 16px;
     padding: 12px;
     background-color: #6462f4;
+    border-radius: 50%;
+
 }
 
 .SearchBox img:hover  {

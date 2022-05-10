@@ -10,3 +10,20 @@
     top: 0;
     background-color: #B5B4FB;
 }
+
+.SideBySide {
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.SideBySide span {
+    background-color: #6462f4;
+    padding: 10px 4px;
+    margin-left: 5px;
+    border-radius: 25% ;
+    color: white; 
+    font-weight: bold;
+}
