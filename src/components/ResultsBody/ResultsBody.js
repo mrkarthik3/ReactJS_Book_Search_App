@@ -3,8 +3,10 @@ import styles from "./ResultsBody.module.css";
 import Book from "./Book";
 
 const ResultsBody = (props) => {
+  // console.log("ResultsBody Component Ran");
   const [isLoading, setIsLoading] = useState(true);
   const [fetchedBooks, setFetchedBooks] = useState([]);
+
   let numberOfFilters = 0;
   useEffect(() => {
     // Randomizing Keyword used for Fetching Books
@@ -64,18 +66,47 @@ const ResultsBody = (props) => {
       });
   }, []);
 
+  //-------------------------------------------------------------------
+  // PAGINATION CODE MUST BE APPLIED BEFORE
+  let paginatedBooks = [];
+  if (isNaN(props.entries) || props.entries === "All") {
+    // console.log("this shouldve run");
+    paginatedBooks = [...fetchedBooks];
+    // console.log(paginatedBooks);
+  }
+  let startIdx = props.pageNo * props.entries - props.entries;
+  let endIdx = props.pageNo * props.entries;
+  if (props.entries > 0) {
+    console.log(startIdx, endIdx);
+    for (
+      let i = startIdx;
+      startIdx >= 0 && startIdx < fetchedBooks.length && i < endIdx;
+      i++
+    ) {
+      if (fetchedBooks[i] !== undefined) {
+        paginatedBooks[i - startIdx] = fetchedBooks[i];
+      }
+      // i-startIdx will keep the paginatedBooks array size (constant) = props.entries
+      // otherwise it will change array size...
+      // the "if" logic ensures "undefined" dont get into the array in some cases
+      // "undefined" in array will cause error. So they must be avoided
+    }
+    // console.log(paginatedBooks);
+  }
+  //-------------------------------------------------------------------
+
   /** FILTERS & SEARCH ARE BEING APPLIED HERE */
-  console.log(props.filters);
+  // console.log(props.filters);
 
   // Extracted filters data via Object Destructuring
   let { priceMax, priceMin, ratingMax, ratingMin, selectedGenre } =
     props.filters;
 
-  console.log(priceMax);
-  console.log(priceMin);
-  console.log(ratingMax);
-  console.log(ratingMin);
-  console.log(isNaN(selectedGenre));
+  // console.log(priceMax);
+  // console.log(priceMin);
+  // console.log(ratingMax);
+  // console.log(ratingMin);
+  // console.log(isNaN(selectedGenre));
 
   const isValid = (val) => {
     if (val === 0 || val === "" || val === undefined) {
@@ -88,9 +119,10 @@ const ResultsBody = (props) => {
   // console.log(isValid(priceMin));
   // console.log(isValid(ratingMax));
   // console.log(isValid(ratingMin));
-  console.log(isValid(selectedGenre));
+  // console.log(isValid(selectedGenre));
 
-  const filteredAndSearchedBooks = fetchedBooks
+  // IMPORTANT!!! APPLY SEARCH AND FILTERS ON "PAGINATED BOOKS"!! INSTEAD OF FETCHEDBOOKS!!
+  const filteredAndSearchedBooks = paginatedBooks
     .filter((book) => {
       // console.log(book);
       return (
@@ -203,6 +235,27 @@ const ResultsBody = (props) => {
       return <Book data={book} key={i} />;
     });
   props.getFiltersNum(numberOfFilters);
+
+  //-------------------------------------------------------------------
+  // PAGINATION CODE
+  // let paginatedBooks = [];
+  // if (props.entries === "All") {
+  //   paginatedBooks = filteredAndSearchedBooks;
+  // }
+
+  // if (props.entries > 0) {
+  //   let startIdx = props.pageNo * props.entries - props.entries;
+  //   let endIdx = props.pageNo * props.entries;
+  //   console.log(startIdx, endIdx);
+  //   for (let i = startIdx; i < endIdx; i++) {
+  //     paginatedBooks[i - startIdx] = filteredAndSearchedBooks[i];
+  //     // i-startIdx will keep the paginatedBooks array size (constant) = props.entries
+  //     // otherwise it will change array size.
+  //   }
+  //   console.log(paginatedBooks);
+  // }
+  //-------------------------------------------------------------------
+
   if (isLoading) {
     return (
       <div className={styles.ResultsBody}>
@@ -212,10 +265,22 @@ const ResultsBody = (props) => {
       </div>
     );
   }
+  const checkLength = filteredAndSearchedBooks.length;
+  const leftCheck = startIdx < 0;
 
+  // const rightCheck = endIdx > filteredAndSearchedBooks.length;
+  const rightCheck = startIdx > fetchedBooks.length - 1;
   return (
     <div className={styles.ResultsBody}>
-      <div className={styles.Results}>{filteredAndSearchedBooks}</div>
+      <div className={styles.Results}>
+        {leftCheck ? (
+          <p>None left. Click Next!</p>
+        ) : rightCheck ? (
+          <p>None left. Click Prev!</p>
+        ) : (
+          filteredAndSearchedBooks
+        )}
+      </div>
     </div>
   );
 };

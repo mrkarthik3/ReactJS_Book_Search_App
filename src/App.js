@@ -10,6 +10,7 @@ function App() {
   const [searchText, setSearchText] = useState("");
   let [entriesPerPage, setEntriesPerPage] = useState("All");
   let [noOfFilters, setNoOfFilters] = useState(0);
+  let [pageNum, setPageNum] = useState(1);
 
   const pullGenres = (genreData) => {
     // console.log(genreData);
@@ -25,11 +26,18 @@ function App() {
   };
   const pullEntriesPerPage = (entries) => {
     // console.log(entries);
-    setEntriesPerPage(entries);
+    setEntriesPerPage(+entries);
+    setPageNum(1);
   };
   const pullNoOfFilters = (number) => {
-    console.log(number);
+    // console.log(number);
     setNoOfFilters(number);
+  };
+
+  const pageNumber = (num) => {
+    console.log("pageNum before : ", pageNum);
+    setPageNum(() => num + pageNum);
+    console.log("pageNum after: ", num + pageNum);
   };
   return (
     <div className={styles.App}>
@@ -45,8 +53,14 @@ function App() {
         filters={filters}
         searchText={searchText}
         getFiltersNum={pullNoOfFilters}
+        entries={entriesPerPage}
+        pageNo={pageNum}
       />
-      <Footer pullEntries={pullEntriesPerPage} />
+      <Footer
+        pullEntries={pullEntriesPerPage}
+        pullPageNumber={pageNumber}
+        pageNo={pageNum}
+      />
     </div>
   );
 }
