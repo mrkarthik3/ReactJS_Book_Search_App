@@ -28,3 +28,9 @@
     background-color: #007bffd2;
     cursor: pointer;
 }
+
+@media screen and (min-width: 340px) and (max-width: 466px)  {
+    .SearchBox input {
+        width: 35vw;
+    }
+  }
