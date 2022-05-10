@@ -50,7 +50,7 @@ const FiltersPopup = (props) => {
       // selectedGenre: selectedGenre.current.value,
     };
     console.log(data);
-    if (data.priceMax < data.priceMin || data.ratingMax < data.ratingMin) {
+    if (+data.priceMax < +data.priceMin || +data.ratingMax < +data.ratingMin) {
       setError(true);
     } else {
       props.getFilterData(data);

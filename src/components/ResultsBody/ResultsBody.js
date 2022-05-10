@@ -39,7 +39,7 @@ const ResultsBody = (props) => {
             genre: Array.isArray(item.volumeInfo.categories)
               ? item.volumeInfo.categories[0]
               : "Unknown",
-            rating: Math.round(Math.random() * 4 + 1),
+            rating: +Math.round(Math.random() * 4 + 1),
             price: +`${
               item.saleInfo.saleability === "NOT_FOR_SALE" ||
               item.saleInfo.retailPrice.amount === 0
