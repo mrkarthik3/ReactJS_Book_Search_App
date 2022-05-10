@@ -65,9 +65,9 @@
     margin: 8px auto;
     padding: 4px 8px;
 }
-@media screen and (min-width: 300px) and (max-width: 465px)  {
+@media screen and (min-width: 300px) and (max-width: 359px)  {
     .Book {
-        width: 340px;
+        width: 260px;
         display: flex;
         text-align: left;
         border: 2px solid #8886F8;
@@ -97,43 +97,32 @@
     
     }
   }
-@media screen and (min-width: 340px) and (max-width: 466px)  {
+@media screen and (min-width: 360px) and (max-width: 495px)  {
     .Book {
-        width: 280px;
+        width: 300px;
         display: flex;
         text-align: left;
         border: 2px solid #8886F8;
-        margin: 8px;
+        margin: 4px;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 8px;
+        font-size: smaller;
+    }
+  }
+@media screen and (min-width: 496px) and (max-width: 599px)  {
+    .Book {
+        width: 400px;
+        display: flex;
+        text-align: left;
+        border: 2px solid #8886F8;
+        margin: 4px;
         justify-content: space-evenly;
         align-items: center;
         border-radius: 8px;
     }
   }
-@media screen and (min-width: 466px) and (max-width: 574px)  {
-    .Book {
-        width: 380px;
-        display: flex;
-        text-align: left;
-        border: 2px solid #8886F8;
-        margin: 8px;
-        justify-content: space-evenly;
-        align-items: center;
-        border-radius: 8px;
-    }
-  }
-@media screen and (min-width: 575px) and (max-width: 630px)  {
-    .Book {
-        width: 450px;
-        display: flex;
-        text-align: left;
-        border: 2px solid #8886F8;
-        margin: 8px;
-        justify-content: space-evenly;
-        align-items: center;
-        border-radius: 8px;
-    }
-  }
-@media screen and (min-width: 631px) and (max-width: 730px) {
+@media screen and (min-width: 600px) and (max-width: 711px)  {
     .Book {
         width: 480px;
         display: flex;
@@ -145,10 +134,46 @@
         border-radius: 8px;
     }
   }
-
-@media screen and (min-width: 731px) and (max-width: 1040px)  {
+@media screen and (min-width: 712px) and (max-width: 960px)  {
     .Book {
         width: 580px;
+        display: flex;
+        text-align: left;
+        border: 2px solid #8886F8;
+        margin: 8px;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 8px;
+    }
+  }
+@media screen and (min-width: 963px) and (max-width: 1059px) {
+    .Book {
+        width: 380px;
+        display: flex;
+        text-align: left;
+        border: 2px solid #8886F8;
+        margin: 8px;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 8px;
+    }
+  }
+
+@media screen and (min-width: 1060px) and (max-width: 1249px)  {
+    .Book {
+        width: 420px;
+        display: flex;
+        text-align: left;
+        border: 2px solid #8886F8;
+        margin: 8px;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 8px;
+    }
+  }
+@media screen and (min-width: 1250px) and (max-width: 1920px) {
+    .Book {
+        width: 500px;
         display: flex;
         text-align: left;
         border: 2px solid #8886F8;
