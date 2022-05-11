@@ -262,7 +262,7 @@ const ResultsBody = (props) => {
       <div className={styles.ResultsBody}>
         <div className={styles.Loading}>
           <img src={loadingImage} />
-          <h2>Random Search In Progress...</h2>
+          <h2>Fetching New Books From Google Books API...</h2>
         </div>
       </div>
     );
