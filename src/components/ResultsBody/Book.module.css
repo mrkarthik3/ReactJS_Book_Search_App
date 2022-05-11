@@ -39,8 +39,8 @@
 }
 
 .bookinfo {
-    padding: 8px;
-    width: 70%;
+    padding: 0 8px;
+    width: 80%;
     /* border: 1px solid black; */
     /* border-radius: 8px; */
 }
@@ -103,6 +103,7 @@
     .Book {
         width: 300px;
         display: flex;
+        flex-direction: column;
         text-align: left;
         border: 2px solid #8886F8;
         margin: 4px;
@@ -110,6 +111,16 @@
         align-items: center;
         border-radius: 8px;
         font-size: smaller;
+    }
+    .image{
+        margin:   8px;
+        width: 108px;
+        border-radius: 5%;
+        /* border: 1px solid black; */
+        /* border-radius: 8px; */
+        transition-property: width;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
     }
   }
 @media screen and (min-width: 496px) and (max-width: 599px)  {

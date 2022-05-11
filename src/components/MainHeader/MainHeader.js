@@ -32,7 +32,7 @@ const MainHeader = (props) => {
         />
       )}
       <SearchBox
-        placeholder="Title/Author Search"
+        placeholder="Find Title/Author"
         pullSearchText={getSearchData}
       />
     </div>
